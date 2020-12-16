@@ -11,14 +11,11 @@ if (url.searchParams.get('by') != null) {
 
 
 document.querySelector(".tombol").addEventListener('click', function () {
-  Swal.fire("Hallo Boo", "Alfin mau minta maaf soal kemaren, sekarang Alfin punya pertanyaan", "question").then(function () {
-    Swal.fire("Jawab yang jujur yaa boo").then(function () {
-      Swal.fire("Jangan bohong okeee", "", "error").then(function () {
-
+  Swal.fire("Hallo Boo", "Makasih buat kadonya jujur alfin seneng banget kamu ngasih kado seneng juga punya kamu boo").then(function () {
         const {
           value: name
         } = Swal.fire({
-          title: 'Masukin nama kamu dulu',
+          title: 'Masukin lagi nama kamu boo',
           input: 'text',
           inputLabel: '',
           showCancelButton: true,
@@ -29,47 +26,38 @@ document.querySelector(".tombol").addEventListener('click', function () {
               nama = value;
             }
           }
-        }).then(function () {
-          const pertanyaan = Swal.fire({
-            title: `${nama} udah maafin ${sender} kan?`,
-            showDenyButton: true,
-            showCancelButton: false,
-            confirmButtonText: `Udah`,
-            denyButtonText: `Bentar lagi`,
-          }).then((result) => {
-            /* Read more about isConfirmed, isDenied below */
-            if (result.isConfirmed) {
-              Swal.fire(`${nama} sekarang udah baikan kan,${sender} bener2 ga maksud kemaren maafin yaaa:) `).then(function () {
-                Swal.fire({
-                  title: 'Seberapa baikan kamu boo?',
-                  icon: 'question',
-                  input: 'range',
-                  inputLabel: 'Antara 1 - 100 ya',
-                  inputAttributes: {
-                    min: 1,
-                    max: 100,
-                    step: 1
-                  },
-                  inputValue: 50
-                }).then((e) => {
+        }).then((e) => {
                   val = e.value
-                  Swal.fire(`${sender} seneng dengernya kalo ${nama} udah lebih baik, maaf yang kemaren boo`).then(function () {
+                  Swal.fire(`${sender} mau ajak ${nama} buat ketemu secepetnya yuuu`).then(function () {
                     Swal.fire({
-                      title: `Sekarang ${nama} kan udah baikan sekarang chatan lagi yuuu sama ${sender} di wa?`,
+                      title: `Kapan ${nama} bisa ketemu ${sender}?`,
                       showDenyButton: true,
                       showCancelButton: false,
-                      confirmButtonText: `iyaaaaaa :)`,
-                      denyButtonText: `Udah ditunggu`,
+                      confirmButtonText: `besok :)`,
+                      denyButtonText: `Besoknya lagi hehe`,
                     }).then((result) => {
                       /* Read more about isConfirmed, isDenied below */
                       if (result.isConfirmed) {
-                        Swal.fire(`Huhu ${sender} minta maaf sekali lagi, Alfin tunggu ${nama} , makasihhh yaa boo:)`).then(function () {
-                          Swal.fire('Terakhir deh boo').then(function () {
-                            Swal.fire('Coba klik ikon hati di paling bawah dong')
+                        Swal.fire(`Makasihhhhhh, mau peluk kamu, Love you boo`).then(function () {
+                          Swal.fire({
+                            title: 'Masukin keinginan atau doa buat Alfin:)',
+                            input: 'text',
+                            inputLabel: '',
+                            showCancelButton: true,
+                            inputValidator: (value) => {
+                            if (!value) {
+                            return 'Isi dulu dong boo'
+                            } else {
+                            nama = value;
+                           }
+                         }
+                      })
+                          Swal.fire('Terakhir  boo').then(function () {
+                            Swal.fire('klik lagi ikon hati di paling bawah dong')
                           })
                         })
                       } else if (result.isDenied) {
-                        Swal.fire('beneran udah ditungguin huhu', '', 'error').then(function () {
+                        Swal.fire('hum', '', 'error').then(function () {
                           Swal.fire('hum boo :((')
                         })
                       }
@@ -78,7 +66,7 @@ document.querySelector(".tombol").addEventListener('click', function () {
                 })
               })
             } else if (result.isDenied) {
-              Swal.fire(`Pliss maafin ${sender}?`, '', 'error').then(function () {
+              Swal.fire(`hum`, '', 'error').then(function () {
                 Swal.fire('hum boo :((')
               })
             }
