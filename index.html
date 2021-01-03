@@ -1,96 +1,80 @@
-<!DOCTYPE html>
 <html>
-<style>
-body, html {
-  height: 100%;
-  margin: 0;
+    <head>
+        <title>Buat Suci</title>
+   
+    <body class="background" background="https://media.giphy.com/media/gBxL0G0DqZd84/giphy.gif"></body>"
+    </head>
+    <style>
+        .head {
+    text-align: center;
+    font-size: 50px;
+    text-shadow: 5px 4px 3px black;
+    color :white;
+    display: contents;
+    position: fixed;
 }
-
-.bgimg {
-  background-image: url('https://media.giphy.com/media/BpJWIIYcGd2Cc/giphy.gif');
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  color: black;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 25px;
+.head h2 {
+    font-size: 15px;
 }
-
-.topleft {
-  position: absolute;
-  top: 0;
-  left: 16px;
+a, button,input[type=submit],input[type=reset] {
+    font-family: sans-serif;
+    font-size: 15px;
+    background: darkcyan;
+    color: aquamarine;
+    border: white 3px solid;
+    border-radius: 15px;
+    padding: 12px 20px;
+    margin-top: 10px;
 }
-
-.bottomleft {
-  position: absolute;
-  bottom: 0;
-  left: 16px;
+a {
+    text-decoration: none;
 }
-
-.middle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+a:hover, button:hover, input[type=submit]:hover, input[type=reset]:hover{
+    opacity:0.5;
 }
-
-hr {
-  margin: auto;
-  width: 40%;
+.right {
+    display: block;
+    position: fixed;
+    top: 470px;
+    left: 1000px;
 }
-</style>
-<body>
-
-<div class="bgimg">
-  <div class="topleft">
-    <p>Apaaaa hayo</p>
-  </div>
-  <div class="middle">
-    <h1>DITUNGGU YAA BOO</h1>
-    <h5>Insyaallah kalo ga telat hehe</h5>
-    <hr>
-<p id="demo"></p>
-  </div>
-  <div class="bottomleft">
-    <p>hayooo apa</p>
-  </div>
-</div>
-<!-- Display the countdown timer in an element -->
-
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
-</script>
-</body>
+.center {
+    display: block;
+    position: fixed;
+    top: 470px;
+    left: 650px; 
+}
+    .left {
+    display: block;
+    position: fixed;
+    top: 470px;
+    left: 250px;
+}
+.box {
+    position: relative;
+    top: 450px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    color: white;
+    background-size: auto;
+}
+.box h1 {
+    text-align: center;
+}
+.background {
+    background-size: cover;
+}
+    </style>
+    <div class="box"><h1>a a aaaaa </h1></div>
+    <body>
+        <ul>
+            <a class="right" href="#">HAI</a>
+            <a class="center" href="#">HAI</a>
+            <a class="left" href="#">HAI</a>
+        </ul>
+    </body>
+    <div class="head"><h1>BUAT SUCI.</h1>
+    <h2>dari alfin sepenuhnya buat kamu, bukan apa-apa. Tapi semoga kamu suka</h2></div>
 </html>
-
-
